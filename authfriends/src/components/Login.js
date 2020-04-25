@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { BrowserRouter as Router } from "react-router-dom"
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 
 const Login = () => {
@@ -25,9 +24,7 @@ const Login = () => {
           })
           .catch(err => console.error(err));
       };
-  
-
-  
+   
     return (
       <form onSubmit={login}>
         <input
