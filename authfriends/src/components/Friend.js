@@ -9,12 +9,14 @@ const Friend = props => {
     axiosWithAuth()
     .delete(`/friends/${id}`)
     .then(res => {
+      props.setCurrentFriends([...res.data]);
       console.log(res);
     })
     .catch(err => {
       console.log(err);
     })
   }
+
 
   return (
     <div>

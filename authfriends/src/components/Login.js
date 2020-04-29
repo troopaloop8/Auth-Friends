@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 
-const Login = () => {
+const Login = (props) => {
     const [credentials, setCredentials] = useState({});
     const [isLoading, setIsLoading] = useState(false);
   
@@ -20,7 +20,7 @@ const Login = () => {
           .then(res => {
             console.log("jt: Login.js: login: success: res: ", res);
             localStorage.setItem("token", res.data.payload);
-            // props.history.push("/protected");
+            props.history.push("/friends");
           })
           .catch(err => console.error(err));
       };

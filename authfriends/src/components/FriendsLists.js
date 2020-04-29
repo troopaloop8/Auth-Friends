@@ -55,7 +55,7 @@ const FriendsList = props => {
             </form>
             <div>
                 {friendsList.map((friend, index) => {
-                    return <Friend friend={friend} key={index} />
+                    return <Friend setCurrentFriends={setCurrentFriends} friend={friend} key={index} />
                 })}
             </div>
         </div>
